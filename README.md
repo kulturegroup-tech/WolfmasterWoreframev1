@@ -50,7 +50,7 @@ Self-hosting the images (`scripts/self-host-images.py`) guarantees the ripple wo
 - **YouTube.** Currently links to a YouTube search. Replace it with the channel URL.
 - **Awards / international titles.** Add them in the PSA record list. There is a commented template in `index.html`.
 - **Testimonials.** A commented-out section is ready for real, approved quotes.
-- **Photography.** The current images are AI-generated stand-ins. Replace them with real shoots, especially for the trainer section.
+- **Photography.** The trainer and PSA sections use real photos of Rajender. The remaining images (hero, dogs, programs, CTA) are AI-generated stand-ins; swap in real shoots as they come.
 
 ## Enquiry form
 
