@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wolfmaster-k9.netlify.app/sitemap.xml

@@ -1,57 +1,48 @@
-# Wolfmaster K9
+# Wolfmaster K9 website
 
-Website for **Rajender “Wolfmaster Bunty” Chauhan** and Wolfmaster K9.
+Multi-page site for **Wolfmaster K9**, the protection-dog and training team led by founder and head trainer Rajender “Wolfmaster Bunty” Chauhan (Faridabad, Delhi NCR).
 
-It is a static site with no build step. Open `index.html` through any web server, or deploy the folder to Netlify, Vercel or GitHub Pages.
+The structure, page architecture and design system follow the Israel Protection K9 site, as requested:
+- **Type:** Cormorant Garamond for headlines and Onest for text.
+- **Look:** a near-black page with thin-outlined glass panels over full-bleed photos.
+- **Buttons:** small uppercase labels, one blue primary action.
+- **Navigation:** dropdowns, with the phone number and "Connect with us" in the header.
 
-## Design system
+All copy, photos and the logo are Wolfmaster's own.
 
-- **Palette.** Graphite and bone, monochrome first: void `#0b0b0a`, coal `#121310`, bone `#e8e4da`, dust `#8d8a80`. One quiet military accent, field olive `#a3a17c`, used only for numerals, dates and labels.
-- **Type.** All fonts are self-hosted in `assets/fonts`.
-  - **Archivo Expanded** (variable, `font-stretch: 125%`): display headlines, set tight.
-  - **Instrument Serif Italic**: the emotional word in each headline.
-  - **Geist**: body text. **Geist Mono**: small labels and metadata.
-- **Imagery.** One cinematic grade throughout: low-key, amber rim light, film grain. A live grain overlay ties the photos and UI together. See `assets/img/README.md`.
+## How it's built
 
-## Motion
+- `build/data.mjs`: contact details, navigation, breeds, protection types, areas, dog listings and the image map.
+- `build/layout.mjs`: header, footer, contact form and shared building blocks (page hero, glass panel, cards).
+- `build/pages.mjs`: every page.
+- `build/build.mjs`: writes the static site into `public/`, along with `sitemap.xml`, `robots.txt` and `404.html`.
+- `public/assets`: the CSS, JS, fonts (self-hosted, OFL) and local photos.
 
-GSAP, ScrollTrigger, SplitText, ScrambleText and Lenis are vendored in `assets/vendor`. Every movement has a job:
+Edit the files in `build/`, then run:
 
-| Moment | Job |
+```bash
+node build/build.mjs
+```
+
+Netlify runs the same command on every push (see `netlify.toml`, which publishes `public/`).
+
+## Pages
+
+| Section | Pages |
 |---|---|
-| Preloader counter → curtain | Covers font and hero-image load, then reveals the hero |
-| Hero lines rise from a mask; image settles | First impression; the image sinks and the type lifts as you leave |
-| Manifesto words brighten as you scroll | Sets a reading pace |
-| Marquee speeds up with scroll velocity | Shows the disciplines and responds to the visitor |
-| Image chapters open from an inset | Marks the start of each chapter |
-| Program rows: the preview image follows the cursor | Previews each program without leaving the list |
-| Dogs: pinned horizontal lineup + progress bar | Browsing a lineup, with your position shown |
-| Process line draws and step markers light up | Shows progress through the process |
-| Hero photo ripples around the cursor (WebGL, OGL flowmap) | The first image responds to the visitor's presence |
-| Footer wordmark rises | Closes the page |
-| Mono labels decode (ScrambleText) | A field-dossier feel that marks each new section |
-| Links roll their characters on hover | Shows the link will respond, without colour |
+| Home | `/` |
+| Available Dogs | `/available-dogs/` (filters by breed, sex and status) |
+| Breeds | Belgian Malinois, German Shepherd, Dutch Shepherd |
+| Protection Dogs | overview, plus Personal, Family, Executive, Farmhouse & Estate, Guard, Security |
+| The Process | Our Difference, The Team, Home Integration, Our Story, How It Works |
+| Client Service | Training Programs, PSA Sport & Decoy, Guides (2 articles), FAQ, Contact |
+| Areas | Delhi, Gurugram, Noida, Faridabad, Ghaziabad |
 
-The site degrades cleanly:
+## Before launch
 
-- **No JS.** All content is visible and the dog lineup becomes a native swipe.
-- **Reduced motion.** Lenis is off, there are no scroll animations, and nothing is hidden.
-- **Touch.** No custom cursor or magnetic effects.
-
-### Hero ripple
-
-The source is `src/hero-ripple.js` (OGL), bundled to `assets/js/hero-ripple.js`. After editing it, rebuild with `npm install && npm run build:ripple`.
-It runs only on mouse/trackpad devices and is off under reduced motion. WebGL needs a CORS-clean image, so if the image CDN doesn't send CORS headers the hero quietly keeps the plain photo.
-Self-hosting the images (`scripts/self-host-images.py`) guarantees the ripple works.
-
-## Content to confirm before launch
-
-- **Phone / email** (`+91 98733 35698`, `wolfmasterk9@gmail.com`). Taken from the public PSA event listing.
-- **YouTube.** Currently links to a YouTube search. Replace it with the channel URL.
-- **Awards / international titles.** Add them in the PSA record list. There is a commented template in `index.html`.
-- **Testimonials.** A commented-out section is ready for real, approved quotes.
-- **Photography.** The trainer and PSA sections use real photos of Rajender. The remaining images (hero, dogs, programs, CTA) are AI-generated stand-ins; swap in real shoots as they come.
-
-## Enquiry form
-
-There is no backend. The form opens WhatsApp with the enquiry pre-filled. The number is set in `assets/js/main.js` (`WHATSAPP`).
+- **Dog listings.** `dogs` in `build/data.mjs` contains **sample** entries, shown with a "Sample" badge. Replace them with real dogs.
+- **Team.** The team page has role cards with no names yet. Add real profiles and photos.
+- **Areas.** Confirm the cities served before adding more (`areas` in `build/data.mjs`).
+- **Press and testimonials.** The reference site has press logos and named testimonials. Add these only with real coverage and quotes used with permission.
+- **Contact details** (`+91 98733 35698`, `wolfmasterk9@gmail.com`). Confirm these.
+- **Photos.** Real photos of Rajender are in `public/assets/img`. The other images are AI-generated stand-ins hosted on Higgsfield. Run `python3 scripts/self-host-images.py` to download and compress them locally (it rebuilds the site), or replace them with real shoots.
