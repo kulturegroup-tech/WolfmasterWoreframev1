@@ -35,7 +35,8 @@ const ai = {
   // Home hero slideshow (bright lifestyle)
   heroFamily: "hf_20261025_130856_ffa5950a-18fd-42b0-8f0a-3545218f5bf3",
   heroWalk: "hf_20261025_130856_c3cbcfee-c7ee-462d-80c5-0c0ee8bd1133",
-  heroPool: "hf_20261025_130855_450ed3d9-57bf-47bb-9df5-d738e486e440",
+  heroBite: "hf_20261025_131515_a3bb615d-7b95-4aeb-8400-554120e02f07",
+  heroSprint: "hf_20261025_131515_a7deb46e-2f7b-4100-a3a6-ebe4cfc62ae7",
   // Daylight set: fresher, brighter scenes to balance the night photography
   dayFamily: "hf_20261025_125519_f8997c60-1b77-44eb-a27c-bdbbb92b03c2",
   dayHeel: "hf_20261025_125518_4bd4bd0f-73b2-414f-8892-bfaaec5fd228",

@@ -17,7 +17,8 @@ const home = {
   <div class="hero__slides" data-slides>
     <img class="hero__img is-active" src="${img("heroFamily")}" alt="A family relaxing on a sunny garden lawn with their Belgian Malinois" fetchpriority="high">
     <img class="hero__img" src="${img("heroWalk")}" alt="A man walking a German Shepherd in heel along a sunny tree-lined avenue" loading="lazy">
-    <img class="hero__img" src="${img("heroPool")}" alt="A Belgian Malinois sitting on a sunlit farmhouse terrace beside a pool" loading="lazy">
+    <img class="hero__img" src="${img("heroBite")}" alt="A Belgian Malinois launching onto a decoy's bite sleeve during training" loading="lazy">
+    <img class="hero__img" src="${img("heroSprint")}" alt="A German Shepherd sprinting at full speed across a training field" loading="lazy">
   </div>
   <div class="hero__shade"></div>
   <div class="wrap hero__inner">

@@ -97,8 +97,12 @@
       "file": "hf_20261025_130856_c3cbcfee-c7ee-462d-80c5-0c0ee8bd1133",
       "width": 2400
     },
-    "heroPool": {
-      "file": "hf_20261025_130855_450ed3d9-57bf-47bb-9df5-d738e486e440",
+    "heroBite": {
+      "file": "hf_20261025_131515_a3bb615d-7b95-4aeb-8400-554120e02f07",
+      "width": 2400
+    },
+    "heroSprint": {
+      "file": "hf_20261025_131515_a7deb46e-2f7b-4100-a3a6-ebe4cfc62ae7",
       "width": 2400
     }
   }
