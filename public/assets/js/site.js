@@ -119,5 +119,39 @@
     }, 3000);
   });
 
+  // ----- Gallery lightbox -----
+  document.querySelectorAll("[data-gallery]").forEach(function (grid) {
+    var box = grid.nextElementSibling;
+    if (!box || !box.hasAttribute("data-lightbox")) return;
+    var btns = Array.prototype.slice.call(grid.querySelectorAll(".gallery__btn"));
+    var im = box.querySelector("img"), cap = box.querySelector("figcaption"), cur = 0, last = null;
+    function show(i) {
+      cur = (i + btns.length) % btns.length;
+      im.src = btns[cur].dataset.full; im.alt = btns[cur].dataset.caption; cap.textContent = btns[cur].dataset.caption;
+    }
+    function open(i) { last = document.activeElement; show(i); box.hidden = false; document.body.style.overflow = "hidden"; box.querySelector("[data-close]").focus(); }
+    function close() { box.hidden = true; document.body.style.overflow = ""; if (last) last.focus(); }
+    btns.forEach(function (b, i) { b.addEventListener("click", function () { open(i); }); });
+    box.querySelector("[data-close]").addEventListener("click", close);
+    box.querySelector("[data-prev]").addEventListener("click", function () { show(cur - 1); });
+    box.querySelector("[data-next]").addEventListener("click", function () { show(cur + 1); });
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (box.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(cur - 1);
+      if (e.key === "ArrowRight") show(cur + 1);
+    });
+  });
+
+  // ----- Course interest: pre-fill the enquiry form from ?course= -----
+  var course = new URLSearchParams(location.search).get("course");
+  if (course) {
+    var msg = document.querySelector("form[data-whatsapp] textarea[name=message]");
+    if (msg && !msg.value) msg.value = "I'd like to register interest in the " + course.slice(0, 80) + ".";
+    var other = document.querySelector('form[data-whatsapp] input[value="Something else"]');
+    if (other) other.checked = true;
+  }
+
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

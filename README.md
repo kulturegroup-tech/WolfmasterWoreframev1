@@ -32,6 +32,8 @@ Netlify runs the same command on every push (see `netlify.toml`, which publishes
 |---|---|
 | Home | `/` |
 | Available Dogs | `/available-dogs/` (filters by breed, sex and status) |
+| Courses | `/courses/`: six planned courses, each marked "Coming soon" with Register interest |
+| Gallery | `/gallery/`: photo grid with a full-screen viewer (tap, arrow keys, Esc) |
 | Breeds | Belgian Malinois, German Shepherd, Dutch Shepherd |
 | Protection Dogs | overview, plus Personal, Family, Executive, Farmhouse & Estate, Guard, Security |
 | The Process | Our Difference, The Team, Home Integration, Our Story, How It Works |
@@ -39,6 +41,9 @@ Netlify runs the same command on every push (see `netlify.toml`, which publishes
 | Areas | Delhi, Gurugram, Noida, Faridabad, Ghaziabad |
 
 ## Before launch
+
+- **Courses.** `courses` in `build/data.mjs` lists the planned courses with no dates or fees. Confirm the course list, then add dates, duration and fees once the team sets them.
+- **Gallery.** Only the three photos of Rajender are real. Replace the rest of `gallery` in `build/data.mjs` with real Wolfmaster photos, because visitors will read a gallery as real moments.
 
 - **Dog listings.** `dogs` in `build/data.mjs` contains **sample** entries, shown with a "Sample" badge. Replace them with real dogs.
 - **Team.** The team page has role cards with no names yet. Add real profiles and photos.

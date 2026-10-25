@@ -67,6 +67,7 @@ export function img(key, size) {
 
 export const nav = [
   { label: "Available Dogs", href: "/available-dogs/" },
+  { label: "Courses", href: "/courses/" },
   {
     label: "Breeds",
     items: [
@@ -102,6 +103,7 @@ export const nav = [
     items: [
       { label: "Training Programs", href: "/training/" },
       { label: "PSA Sport & Decoy", href: "/psa/" },
+      { label: "Gallery", href: "/gallery/" },
       { label: "Guides", href: "/guides/" },
       { label: "FAQ", href: "/faq/" },
       { label: "Contact", href: "/contact/" },
@@ -216,4 +218,57 @@ export const dogs = [
   { name: "Sample listing", breed: "Belgian Malinois", sex: "Female", age: "18 months", image: "action", status: "In training", note: "Personal protection, finishing proofing" },
   { name: "Sample listing", breed: "German Shepherd", sex: "Male", age: "3 years", image: "gsd", status: "Available", note: "Family and home protection" },
   { name: "Sample listing", breed: "Belgian Malinois", sex: "Male", age: "10 months", image: "dayPuppy", status: "Puppy", note: "Foundation trained, ready for development" },
+];
+
+// Courses Wolfmaster K9 plans to offer. No dates or fees until the team confirms them.
+export const courses = [
+  {
+    slug: "professional-dog-trainer", name: "Professional Dog Trainer Course", image: "dayTraining", level: "Career", format: "Classroom + field",
+    short: "A structured course for people who want to train dogs professionally, built on the methods the Wolfmaster team uses every day.",
+    topics: ["Learning theory and canine body language", "Obedience from foundation to off-leash", "Behaviour assessment and problem cases", "Working with clients and their families"],
+  },
+  {
+    slug: "psa-decoy", name: "PSA Decoy Course", image: "psa", level: "Advanced", format: "Field",
+    short: "Decoy fundamentals for protection sport: safe catches, reading the dog and building confidence and control.",
+    topics: ["Equipment, safety and suit work", "Presenting the sleeve and catching", "Reading drive, stress and confidence", "Preparing for PSA decoy certification"],
+  },
+  {
+    slug: "protection-dog-handler", name: "Protection Dog Handler Course", image: "dayHeel", level: "Owners", format: "Field + home",
+    short: "For owners of protection dogs who want complete, confident handling at home and in public.",
+    topics: ["Control, commands and the off switch", "Handling in traffic, crowds and vehicles", "Scenario awareness and safe responses", "Maintenance training at home"],
+  },
+  {
+    slug: "puppy-foundation", name: "Puppy Foundation Course", image: "dayPuppy", level: "Beginner", format: "Weekly sessions",
+    short: "The first months shape a working dog. Owners learn socialisation, engagement and early obedience the Wolfmaster way.",
+    topics: ["Socialisation and confidence building", "Engagement, play and focus", "House manners and routines", "Early obedience foundations"],
+  },
+  {
+    slug: "canine-behaviour", name: "Canine Behaviour Workshop", image: "dayMalinois", level: "Open to all", format: "Workshop",
+    short: "Understand why dogs do what they do, and how to approach fear, reactivity and aggression safely.",
+    topics: ["Stress signals and body language", "Fear, reactivity and aggression", "Management versus training", "When to call a professional"],
+  },
+  {
+    slug: "obedience-for-owners", name: "Obedience for Owners", image: "dayGsd", level: "Beginner", format: "Group classes",
+    short: "Practical group classes that give everyday owners a calm, reliable, well-mannered dog.",
+    topics: ["Walking nicely on lead", "Sit, down, stay and recall", "Calm greetings and visitors", "Building good habits at home"],
+  },
+];
+
+// Gallery: real Wolfmaster photographs first, then stand-in imagery to be replaced by real shoots.
+export const gallery = [
+  { image: "buntyPsa", caption: "Memorial PSA Trial 2025, Hyderabad", real: true, wide: false },
+  { image: "buntyHeel", caption: "Heel work on the training field", real: true, wide: false },
+  { image: "heroBite", caption: "Bite work", wide: true },
+  { image: "dayHeel", caption: "Morning heel walk" },
+  { image: "dayMalinois", caption: "Belgian Malinois" },
+  { image: "heroSprint", caption: "Full sprint", wide: true },
+  { image: "dayFamily", caption: "Family protection" },
+  { image: "buntyArchive", caption: "From the archive", real: true },
+  { image: "dayTraining", caption: "Down-stay" },
+  { image: "dayEstate", caption: "Farmhouse placement", wide: true },
+  { image: "dayGsd", caption: "German Shepherd" },
+  { image: "psa", caption: "PSA trial field" },
+  { image: "dayPuppy", caption: "Foundation puppy" },
+  { image: "dayExec", caption: "Executive protection" },
+  { image: "dayDutch", caption: "Dutch Shepherd" },
 ];

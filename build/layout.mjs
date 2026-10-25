@@ -1,4 +1,4 @@
-import { site, nav, img, breeds, protectionTypes, dogs } from "./data.mjs";
+import { site, nav, img, breeds, protectionTypes, dogs, courses, gallery } from "./data.mjs";
 
 export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const arrow = `<svg class="ico-arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
@@ -235,6 +235,36 @@ export function credentials() {
     ["Memorial PSA Trial 2025", "A medal and three trophies at the Hyderabad trial, December 2025."],
   ];
   return `<div class="cred-track">${items.map(([t, d]) => `<div class="cred reveal"><h3 class="cred__title">${t}</h3><p>${d}</p></div>`).join("")}</div>`;
+}
+
+export function courseCards(list = courses, { full = false } = {}) {
+  return `<div class="course-grid">${list.map((c) => `
+    <article class="course reveal" id="${c.slug}">
+      <div class="course__img"><img src="${img(c.image, "sm")}" alt="" loading="lazy"><span class="badge badge--soon">Coming soon</span></div>
+      <div class="course__body">
+        <p class="course__meta"><span>${c.level}</span><span>${c.format}</span></p>
+        <h3 class="h3">${c.name}</h3>
+        <p class="muted">${c.short}</p>
+        ${full ? `<ul class="course__topics">${c.topics.map((t) => `<li>${t}</li>`).join("")}</ul>` : ""}
+        <a class="link" href="/contact/?course=${encodeURIComponent(c.name)}">Register interest ${arrow}</a>
+      </div>
+    </article>`).join("")}</div>`;
+}
+
+export function galleryGrid(list = gallery) {
+  return `<div class="gallery" data-gallery>${list.map((g, i) => `
+    <figure class="gallery__item${g.wide ? " gallery__item--wide" : ""} reveal">
+      <button type="button" class="gallery__btn" data-full="${img(g.image)}" data-caption="${esc(g.caption)}" aria-label="Open photo: ${esc(g.caption)}">
+        <img src="${img(g.image, "sm")}" alt="${esc(g.caption)}" loading="lazy">
+      </button>
+      <figcaption>${g.caption}</figcaption>
+    </figure>`).join("")}</div>
+  <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button type="button" class="lightbox__close" data-close aria-label="Close">×</button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-prev aria-label="Previous photo">‹</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-next aria-label="Next photo">›</button>
+  </div>`;
 }
 
 export function cta({ title, text, buttons }) {

@@ -1,7 +1,7 @@
-import { site, breeds, protectionTypes, areas, dogs } from "./data.mjs";
+import { site, breeds, protectionTypes, areas, dogs, courses, gallery } from "./data.mjs";
 import {
   btn, arrow, img, esc, pageHero, glassPanel, split, sectionHead, breedCards, dogCard, dogFilters,
-  typeCards, credentials, cta, faqList, contactForm,
+  typeCards, credentials, cta, faqList, contactForm, courseCards, galleryGrid,
 } from "./layout.mjs";
 
 const phoneBtn = () => btn(site.phone, site.phoneHref);
@@ -87,6 +87,22 @@ ${split({
   ],
   buttons: btn("How it works", "/how-it-works/") + btn("Home integration", "/process/"),
 })}
+
+<section class="section section--alt">
+  <div class="wrap">
+    ${sectionHead({ eyebrow: "Wolfmaster Academy", title: "Courses", text: "Learn from the team that trains Wolfmaster dogs. New courses for owners, trainers and decoys are launching soon." })}
+    ${courseCards(courses.slice(0, 3))}
+    <p class="center">${btn("View all courses", "/courses/", { arrowIcon: true })}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    ${sectionHead({ eyebrow: "Gallery", title: "From the field", text: "Training days, trials and the dogs we work with." })}
+    ${galleryGrid(gallery.slice(0, 6))}
+    <p class="center">${btn("Open the gallery", "/gallery/", { arrowIcon: true })}</p>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
@@ -463,8 +479,40 @@ ${pageHero({ eyebrow: "Areas we serve", title: `Protection dogs in ${a.name}`, l
 `,
 }));
 
+// ------------------------------------------------------------------ COURSES & GALLERY
+const coursesPage = {
+  path: "/courses/",
+  title: "Courses",
+  description: "Courses from Wolfmaster K9: professional dog trainer, PSA decoy, protection dog handler, puppy foundation, behaviour and obedience.",
+  body: `
+${pageHero({ eyebrow: "Wolfmaster Academy", title: "Courses", lead: "The methods behind every Wolfmaster dog, taught by the team that uses them. Courses are launching soon. Register your interest and we will contact you first with dates and details.", image: "dayTraining", buttons: btn("Register interest", "/contact/", { variant: "primary", arrowIcon: true }) + btn(site.phone, site.phoneHref) })}
+<section class="section">
+  <div class="wrap">
+    ${courseCards(courses, { full: true })}
+  </div>
+</section>
+${cta({ title: "Want a course for your team?", text: "We can run training for security agencies, kennels and groups of owners.", buttons: btn("Talk to us", "/contact/", { variant: "primary", arrowIcon: true }) + phoneBtn() })}
+${contactForm("Register your interest")}
+`,
+};
+
+const galleryPage = {
+  path: "/gallery/",
+  title: "Gallery",
+  description: "Photos from Wolfmaster K9 training days, PSA trials and the dogs we work with.",
+  body: `
+${pageHero({ eyebrow: "Gallery", title: "From the field", lead: "Training days, trials and the dogs we work with. Tap any photo to view it full size.", image: "heroSprint" })}
+<section class="section">
+  <div class="wrap">
+    ${galleryGrid()}
+  </div>
+</section>
+${cta({ title: "Follow us for more", text: "New training clips and photos every week.", buttons: btn("Instagram", site.instagram, { variant: "primary", arrowIcon: true, ext: true }) + btn("Facebook", site.facebook, { arrowIcon: true, ext: true }) })}
+`,
+};
+
 export const pages = [
   home, availableDogs, ...breedPages, protectionIndex, ...protectionPages,
   difference, team, processPage, story, howItWorks,
-  training, psa, guidesIndex, ...guidePages, faq, contact, ...areaPages,
+  coursesPage, galleryPage, training, psa, guidesIndex, ...guidePages, faq, contact, ...areaPages,
 ];
