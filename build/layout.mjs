@@ -79,7 +79,7 @@ function footer() {
   const cols = nav.filter((n) => n.items).map((n) => `<div><h4>${n.label}</h4><ul>${n.items.map((s) => `<li><a href="${s.href}">${s.label}</a></li>`).join("")}</ul></div>`).join("");
   return `
 <section class="banner">
-  <img class="banner__img" src="${img("action")}" alt="" loading="lazy">
+  <img class="banner__img" src="${img("dayField")}" alt="" loading="lazy">
   <div class="banner__shade"></div>
   <div class="wrap banner__inner">
     <h2 class="h1">Trained by Wolfmaster.<br>Trusted at home.</h2>

@@ -32,6 +32,17 @@ const ai = {
   psa: "hf_20261005_084500_6f1ade1c-d4d5-4b64-8b67-9b8c425bc1fc",
   exec: "hf_20261005_084500_ec7385c8-4449-4e96-8545-4f66a6498ffd",
   puppy: "hf_20261005_084255_72cba74c-4a63-4de8-b19e-0beb8b39e9c8",
+  // Daylight set: fresher, brighter scenes to balance the night photography
+  dayFamily: "hf_20261025_125519_f8997c60-1b77-44eb-a27c-bdbbb92b03c2",
+  dayHeel: "hf_20261025_125518_4bd4bd0f-73b2-414f-8892-bfaaec5fd228",
+  dayField: "hf_20261025_125519_370b8d97-ee97-4885-95b1-367f60b9490a",
+  dayMalinois: "hf_20261025_125520_b7d65ff0-f588-4c23-81ab-c9c2a4b66ec9",
+  dayGsd: "hf_20261025_125606_4d32eaed-524c-4c08-9091-4aaf3d4220ff",
+  dayDutch: "hf_20261025_125607_c024f8fb-2b87-4815-a4e0-39a0e49c9f19",
+  dayEstate: "hf_20261025_125607_3e487d41-0fd3-49f0-a160-caae2356239e",
+  dayPuppy: "hf_20261025_125607_e5d70fff-fc7b-4389-a7de-107ff8dbaf35",
+  dayExec: "hf_20261025_125652_86f3730e-f585-436f-9a41-2b3396efe554",
+  dayTraining: "hf_20261025_125653_15cf5887-0820-41fc-9d36-da2ead069f23",
 };
 const local = {
   buntyHeel: "/assets/img/bunty-heel.webp",
@@ -95,7 +106,7 @@ export const nav = [
 
 export const breeds = [
   {
-    slug: "belgian-malinois", name: "Belgian Malinois", image: "malinois", tag: "Speed & Drive",
+    slug: "belgian-malinois", name: "Belgian Malinois", image: "dayMalinois", tag: "Speed & Drive",
     short: "Fast, athletic and intensely focused. The Malinois is the working-dog world's first choice for protection.",
     origin: "Belgium", weight: "25–30 kg", temperament: "High drive, quick to learn, deeply handler-focused",
     bestFor: "Personal and executive protection, active families, PSA sport",
@@ -105,7 +116,7 @@ export const breeds = [
     ],
   },
   {
-    slug: "german-shepherd", name: "German Shepherd", image: "gsd", tag: "Presence & Loyalty",
+    slug: "german-shepherd", name: "German Shepherd", image: "dayGsd", tag: "Presence & Loyalty",
     short: "Steady, intelligent and devoted. A German Shepherd's presence alone deters most threats.",
     origin: "Germany", weight: "30–40 kg", temperament: "Balanced, loyal, naturally watchful",
     bestFor: "Family homes, farmhouses and estates, first-time protection dog owners",
@@ -115,7 +126,7 @@ export const breeds = [
     ],
   },
   {
-    slug: "dutch-shepherd", name: "Dutch Shepherd", image: "dutch", tag: "Grit & Versatility",
+    slug: "dutch-shepherd", name: "Dutch Shepherd", image: "dayDutch", tag: "Grit & Versatility",
     short: "Hardy, clear-headed and versatile. The Dutch Shepherd copes with heat, pressure and change.",
     origin: "Netherlands", weight: "25–30 kg", temperament: "Resilient, independent thinker, strong work ethic",
     bestFor: "Personal protection, farm and property work, experienced handlers",
@@ -128,7 +139,7 @@ export const breeds = [
 
 export const protectionTypes = [
   {
-    slug: "personal", name: "Personal Protection", image: "action",
+    slug: "personal", name: "Personal Protection", image: "dayHeel",
     short: "A dog trained to stay at your side and step in on command, at home or out in public.",
     points: ["Heel and off-leash control in crowds and traffic", "Threat recognition without overreaction", "Out and release on a single command", "Handler training before handover"],
     body: [
@@ -137,7 +148,7 @@ export const protectionTypes = [
     ],
   },
   {
-    slug: "family", name: "Family Protection", image: "villa",
+    slug: "family", name: "Family Protection", image: "dayFamily",
     short: "A calm, social guardian that lives with your children and protects the whole household.",
     points: ["Raised and tested around children and visitors", "Clear house manners and boundaries", "Protection of the home and family members", "Ongoing support as your family changes"],
     body: [
@@ -146,7 +157,7 @@ export const protectionTypes = [
     ],
   },
   {
-    slug: "executive", name: "Executive Protection", image: "exec",
+    slug: "executive", name: "Executive Protection", image: "dayExec",
     short: "A discreet, highly controlled dog for business owners, public figures and their families.",
     points: ["Vehicle, doorway and entrance scenarios", "Composure around staff, drivers and guests", "Integration with existing security teams", "Discreet, private handover"],
     body: [
@@ -155,7 +166,7 @@ export const protectionTypes = [
     ],
   },
   {
-    slug: "farmhouse-estate", name: "Farmhouse & Estate", image: "dawn",
+    slug: "farmhouse-estate", name: "Farmhouse & Estate", image: "dayEstate",
     short: "A confident dog for large properties, farmhouses and estates on the edge of the city.",
     points: ["Boundary and perimeter awareness", "Comfort with livestock and outdoor living", "Night-time alertness without nuisance barking", "Suited to Indian summers"],
     body: [
@@ -195,9 +206,9 @@ export const areas = [
 // SAMPLE listings only, shown with a "Sample" badge. Replace with real dogs before launch.
 export const dogs = [
   { name: "Sample listing", breed: "Belgian Malinois", sex: "Male", age: "2 years", image: "malinois", status: "Available", note: "Personal protection, fully trained" },
-  { name: "Sample listing", breed: "German Shepherd", sex: "Female", age: "20 months", image: "gsd", status: "Available", note: "Family protection, raised with children" },
-  { name: "Sample listing", breed: "Dutch Shepherd", sex: "Male", age: "2.5 years", image: "dutch", status: "Reserved", note: "Farmhouse and estate work" },
+  { name: "Sample listing", breed: "German Shepherd", sex: "Female", age: "20 months", image: "dayGsd", status: "Available", note: "Family protection, raised with children" },
+  { name: "Sample listing", breed: "Dutch Shepherd", sex: "Male", age: "2.5 years", image: "dayDutch", status: "Reserved", note: "Farmhouse and estate work" },
   { name: "Sample listing", breed: "Belgian Malinois", sex: "Female", age: "18 months", image: "action", status: "In training", note: "Personal protection, finishing proofing" },
-  { name: "Sample listing", breed: "German Shepherd", sex: "Male", age: "3 years", image: "villa", status: "Available", note: "Family and home protection" },
-  { name: "Sample listing", breed: "Belgian Malinois", sex: "Male", age: "10 months", image: "puppy", status: "Puppy", note: "Foundation trained, ready for development" },
+  { name: "Sample listing", breed: "German Shepherd", sex: "Male", age: "3 years", image: "gsd", status: "Available", note: "Family and home protection" },
+  { name: "Sample listing", breed: "Belgian Malinois", sex: "Male", age: "10 months", image: "dayPuppy", status: "Puppy", note: "Foundation trained, ready for development" },
 ];

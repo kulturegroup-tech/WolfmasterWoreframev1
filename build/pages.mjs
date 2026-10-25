@@ -25,7 +25,7 @@ const home = {
 </section>
 
 ${glassPanel({
-  image: "villa", imageAlt: "A Malinois resting at the entrance of a home at dusk",
+  image: "dayFamily", imageAlt: "A German Shepherd relaxing on the lawn while a family plays in the garden",
   title: "Trained to trial standard",
   text: "Our dogs are trained by a team that competes and works as decoys in Protection Sports Association trials, then proofed for the real places they will live and work.",
   buttons: btn("Our protection dogs", "/protection-dogs/") + btn("Our difference", "/our-difference/") + btn("Connect with us", "/contact/", { arrowIcon: true }),
@@ -73,7 +73,7 @@ ${split({
 </section>
 
 ${split({
-  image: "leash", imageAlt: "A handler's gloved hand holding a leather leash",
+  image: "dayTraining", imageAlt: "A German Shepherd in a down-stay beside its trainer on a sunny lawn",
   reverse: true,
   eyebrow: "After handover",
   title: "Support for the life of your dog",
@@ -100,7 +100,7 @@ const availableDogs = {
   title: "Available Protection Dogs",
   description: "Trained protection dogs and dogs in development from Wolfmaster K9, Delhi NCR.",
   body: `
-${pageHero({ eyebrow: "Available dogs", title: "Available protection dogs", lead: "Every dog listed has been bred or selected by our team and trained to the Wolfmaster standard. Prices are shared on request after a consultation.", image: "malinois" })}
+${pageHero({ eyebrow: "Available dogs", title: "Available protection dogs", lead: "Every dog listed has been bred or selected by our team and trained to the Wolfmaster standard. Prices are shared on request after a consultation.", image: "dayField" })}
 <section class="section">
   <div class="wrap">
     <p class="notice">These are sample listings to show the layout. Real dogs, with photos and details, replace them before launch.</p>
@@ -190,7 +190,7 @@ const difference = {
   title: "Our Difference",
   description: "What sets Wolfmaster K9 protection dogs apart: trial-standard training, family-first temperament and lifetime support.",
   body: `
-${pageHero({ eyebrow: "Our difference", title: "The Wolfmaster standard", lead: "What separates a trained protection dog from a dog that has simply been taught to bite.", image: "villa" })}
+${pageHero({ eyebrow: "Our difference", title: "The Wolfmaster standard", lead: "What separates a trained protection dog from a dog that has simply been taught to bite.", image: "dayEstate" })}
 <section class="section">
   <div class="wrap">
     <div class="pillars">
@@ -214,7 +214,7 @@ const team = {
   title: "The Team",
   description: "Meet the Wolfmaster K9 team, led by founder and head trainer Rajender ‘Wolfmaster Bunty’ Chauhan.",
   body: `
-${pageHero({ eyebrow: "The team", title: "The people behind every dog", lead: "Wolfmaster K9 is a team of trainers, decoys and handlers who work with every dog from its first weeks to the day it goes home, and long after.", image: "dawn" })}
+${pageHero({ eyebrow: "The team", title: "The people behind every dog", lead: "Wolfmaster K9 is a team of trainers, decoys and handlers who work with every dog from its first weeks to the day it goes home, and long after.", image: "dayHeel" })}
 <section class="section">
   <div class="wrap split">
     <figure class="split__media split__media--tall reveal"><img src="${img("buntyHeel")}" alt="Rajender Chauhan working a Malinois in heel" loading="lazy"></figure>
@@ -248,7 +248,7 @@ const processPage = {
   title: "Home Integration",
   description: "How Wolfmaster K9 integrates a protection dog into your home: handler training, home sessions and follow-up.",
   body: `
-${pageHero({ eyebrow: "The process", title: "Home integration", lead: "Bringing a protection dog home is a structured process. We stay with you through every step until your dog is settled and you are confident handling it.", image: "villa" })}
+${pageHero({ eyebrow: "The process", title: "Home integration", lead: "Bringing a protection dog home is a structured process. We stay with you through every step until your dog is settled and you are confident handling it.", image: "dayFamily" })}
 <section class="section">
   <div class="wrap">
     <ol class="steps">
@@ -295,7 +295,7 @@ const howItWorks = {
   title: "How It Works",
   description: "How to get a protection dog from Wolfmaster K9: consultation, matching, training, handover and support.",
   body: `
-${pageHero({ eyebrow: "How it works", title: "From first call to lifetime support", lead: "Five clear steps. No pressure, and no dog leaves us until it is right for your home.", image: "exec" })}
+${pageHero({ eyebrow: "How it works", title: "From first call to lifetime support", lead: "Five clear steps. No pressure, and no dog leaves us until it is right for your home.", image: "dayExec" })}
 <section class="section">
   <div class="wrap">
     <ol class="steps steps--grid">
@@ -319,17 +319,17 @@ const training = {
   title: "Training Programs",
   description: "Obedience, behaviour, protection and board-and-train programs for your own dog, from Wolfmaster K9.",
   body: `
-${pageHero({ eyebrow: "Training programs", title: "Train your own dog with Wolfmaster", lead: "The same trainers who prepare our protection dogs work with your dog, at our facility or at your home.", image: "leash" })}
+${pageHero({ eyebrow: "Training programs", title: "Train your own dog with Wolfmaster", lead: "The same trainers who prepare our protection dogs work with your dog, at our facility or at your home.", image: "dayTraining" })}
 <section class="section">
   <div class="wrap">
     <div class="program-grid">
       ${[
-        ["Obedience &amp; off-leash", "Reliable obedience from foundations to off-leash control around traffic, crowds and other dogs.", "leash"],
-        ["Behaviour", "Aggression, fear, reactivity and anxiety, assessed and addressed by an experienced behaviourist.", "malinois"],
+        ["Obedience &amp; off-leash", "Reliable obedience from foundations to off-leash control around traffic, crowds and other dogs.", "dayTraining"],
+        ["Behaviour", "Aggression, fear, reactivity and anxiety, assessed and addressed by an experienced behaviourist.", "dayMalinois"],
         ["Protection training", "For suitable dogs, structured protection work built on control and a clear off switch.", "action"],
-        ["Puppy foundation", "Confidence, socialisation and engagement in the months that shape a working dog.", "puppy"],
-        ["Board &amp; train", "Residential training at our facility with daily sessions and a full handler handover.", "dawn"],
-        ["Handler coaching", "One-to-one sessions that teach you to read and lead your dog.", "exec"],
+        ["Puppy foundation", "Confidence, socialisation and engagement in the months that shape a working dog.", "dayPuppy"],
+        ["Board &amp; train", "Residential training at our facility with daily sessions and a full handler handover.", "dayEstate"],
+        ["Handler coaching", "One-to-one sessions that teach you to read and lead your dog.", "dayHeel"],
       ].map(([h, p, im]) => `<article class="program reveal"><div class="program__img"><img src="${img(im, "sm")}" alt="" loading="lazy"></div><h3 class="h3">${h}</h3><p class="muted">${p}</p></article>`).join("")}
     </div>
   </div>
@@ -390,7 +390,7 @@ const guidesIndex = {
   title: "Guides",
   description: "Guides from Wolfmaster K9 on choosing, training and living with a protection dog.",
   body: `
-${pageHero({ eyebrow: "Guides", title: "Guides for protection dog owners", lead: "Plain answers to the questions families ask us most.", image: "puppy" })}
+${pageHero({ eyebrow: "Guides", title: "Guides for protection dog owners", lead: "Plain answers to the questions families ask us most.", image: "dayPuppy" })}
 <section class="section"><div class="wrap"><div class="guide-grid">
   ${guides.map((g) => `<a class="guide-card reveal" href="/guides/${g.slug}/"><div class="guide-card__img"><img src="${img(g.image, "sm")}" alt="" loading="lazy"></div><h2 class="h3">${g.title}</h2><p class="muted">${g.summary}</p><span class="link">Read the guide ${arrow}</span></a>`).join("")}
 </div></div></section>
@@ -415,7 +415,7 @@ const faq = {
   title: "FAQ",
   description: "Frequently asked questions about Wolfmaster K9 protection dogs and training.",
   body: `
-${pageHero({ eyebrow: "FAQ", title: "Frequently asked questions", image: "gsd" })}
+${pageHero({ eyebrow: "FAQ", title: "Frequently asked questions", image: "dayGsd" })}
 <section class="section"><div class="wrap narrow">
 ${faqList([
   ["Is a protection dog safe around children?", ["A well-selected, properly trained protection dog is calm and social at home. We select for stable temperament first and test every family dog around children before recommending it."]],
@@ -435,7 +435,7 @@ const contact = {
   title: "Contact",
   description: "Contact Wolfmaster K9 about protection dogs, training and PSA sport. Based in Faridabad, Delhi NCR.",
   body: `
-${pageHero({ eyebrow: "Connect with us", title: "Speak with Wolfmaster K9", lead: "Call, WhatsApp or send the form. We usually reply the same day.", image: "exec", buttons: btn("WhatsApp us", `https://wa.me/${site.whatsapp}`, { variant: "primary", arrowIcon: true, ext: true }) + phoneBtn() })}
+${pageHero({ eyebrow: "Connect with us", title: "Speak with Wolfmaster K9", lead: "Call, WhatsApp or send the form. We usually reply the same day.", image: "dayFamily", buttons: btn("WhatsApp us", `https://wa.me/${site.whatsapp}`, { variant: "primary", arrowIcon: true, ext: true }) + phoneBtn() })}
 ${contactForm("Send an enquiry")}
 `,
 };
@@ -446,7 +446,7 @@ const areaPages = areas.map((a) => ({
   title: `Protection Dogs in ${a.name}`,
   description: `Trained protection dogs and dog training for families in ${a.name}, from Wolfmaster K9 in ${site.base}.`,
   body: `
-${pageHero({ eyebrow: "Areas we serve", title: `Protection dogs in ${a.name}`, lead: `Wolfmaster K9 places and supports trained protection dogs for families and properties in ${a.name}, from our base in ${site.base}.`, image: "villa", buttons: btn("Connect with us", "/contact/", { variant: "primary", arrowIcon: true }) + phoneBtn() })}
+${pageHero({ eyebrow: "Areas we serve", title: `Protection dogs in ${a.name}`, lead: `Wolfmaster K9 places and supports trained protection dogs for families and properties in ${a.name}, from our base in ${site.base}.`, image: "dayEstate", buttons: btn("Connect with us", "/contact/", { variant: "primary", arrowIcon: true }) + phoneBtn() })}
 <section class="section"><div class="wrap">
   ${sectionHead({ title: `What we offer in ${a.name}` })}
   ${typeCards(protectionTypes.slice(0, 3))}
