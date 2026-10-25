@@ -14,7 +14,11 @@ const home = {
   description: "Wolfmaster K9 breeds, trains and places protection dogs for families, homes and principals across Delhi NCR. Led by Rajender ‘Wolfmaster Bunty’ Chauhan since 2002.",
   body: `
 <section class="hero">
-  <img class="hero__img" src="${img("hero")}" alt="A Belgian Malinois standing alert on a floodlit training field at night" fetchpriority="high">
+  <div class="hero__slides" data-slides>
+    <img class="hero__img is-active" src="${img("heroFamily")}" alt="A family relaxing on a sunny garden lawn with their Belgian Malinois" fetchpriority="high">
+    <img class="hero__img" src="${img("heroWalk")}" alt="A man walking a German Shepherd in heel along a sunny tree-lined avenue" loading="lazy">
+    <img class="hero__img" src="${img("heroPool")}" alt="A Belgian Malinois sitting on a sunlit farmhouse terrace beside a pool" loading="lazy">
+  </div>
   <div class="hero__shade"></div>
   <div class="wrap hero__inner">
     <p class="eyebrow">Protection dogs &amp; training · Delhi NCR · Since 2002</p>

@@ -32,6 +32,10 @@ const ai = {
   psa: "hf_20261005_084500_6f1ade1c-d4d5-4b64-8b67-9b8c425bc1fc",
   exec: "hf_20261005_084500_ec7385c8-4449-4e96-8545-4f66a6498ffd",
   puppy: "hf_20261005_084255_72cba74c-4a63-4de8-b19e-0beb8b39e9c8",
+  // Home hero slideshow (bright lifestyle)
+  heroFamily: "hf_20261025_130856_ffa5950a-18fd-42b0-8f0a-3545218f5bf3",
+  heroWalk: "hf_20261025_130856_c3cbcfee-c7ee-462d-80c5-0c0ee8bd1133",
+  heroPool: "hf_20261025_130855_450ed3d9-57bf-47bb-9df5-d738e486e440",
   // Daylight set: fresher, brighter scenes to balance the night photography
   dayFamily: "hf_20261025_125519_f8997c60-1b77-44eb-a27c-bdbbb92b03c2",
   dayHeel: "hf_20261025_125518_4bd4bd0f-73b2-414f-8892-bfaaec5fd228",

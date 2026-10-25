@@ -88,6 +88,18 @@
     "dayTraining": {
       "file": "hf_20261025_125653_15cf5887-0820-41fc-9d36-da2ead069f23",
       "width": 2400
+    },
+    "heroFamily": {
+      "file": "hf_20261025_130856_ffa5950a-18fd-42b0-8f0a-3545218f5bf3",
+      "width": 2400
+    },
+    "heroWalk": {
+      "file": "hf_20261025_130856_c3cbcfee-c7ee-462d-80c5-0c0ee8bd1133",
+      "width": 2400
+    },
+    "heroPool": {
+      "file": "hf_20261025_130855_450ed3d9-57bf-47bb-9df5-d738e486e440",
+      "width": 2400
     }
   }
 }

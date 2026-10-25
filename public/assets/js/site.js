@@ -100,5 +100,24 @@
     });
   });
 
+  // ----- Hero slideshow: swap every 3 seconds -----
+  document.querySelectorAll("[data-slides]").forEach(function (box) {
+    var slides = box.querySelectorAll(".hero__img");
+    if (slides.length < 2) return;
+    var dots = document.createElement("div");
+    dots.className = "hero__dots"; dots.setAttribute("aria-hidden", "true");
+    slides.forEach(function (_, i) { var d = document.createElement("span"); if (!i) d.className = "is-active"; dots.appendChild(d); });
+    var inner = box.parentNode.querySelector(".hero__inner");
+    if (inner) inner.insertBefore(dots, inner.querySelector(".hero__down"));
+    slides.forEach(function (s) { s.loading = "eager"; });
+    var i = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      slides[i].classList.remove("is-active"); dots.children[i].classList.remove("is-active");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("is-active"); dots.children[i].classList.add("is-active");
+    }, 3000);
+  });
+
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
