@@ -228,9 +228,9 @@ export const courses = [
     topics: ["Learning theory and canine body language", "Obedience from foundation to off-leash", "Behaviour assessment and problem cases", "Working with clients and their families"],
   },
   {
-    slug: "psa-decoy", name: "PSA Decoy Course", image: "psa", level: "Advanced", format: "Field",
-    short: "Decoy fundamentals for protection sport: safe catches, reading the dog and building confidence and control.",
-    topics: ["Equipment, safety and suit work", "Presenting the sleeve and catching", "Reading drive, stress and confidence", "Preparing for PSA decoy certification"],
+    slug: "decoy-camp", name: "Decoy Camp", image: "psa", level: "Advanced", format: "Field",
+    short: "Hands-on decoy fundamentals: safe catches, reading the dog and building its confidence and control.",
+    topics: ["Equipment, safety and suit work", "Presenting the sleeve and catching", "Reading drive, stress and confidence", "Working safely with handlers and trial dogs"],
   },
   {
     slug: "protection-dog-handler", name: "Protection Dog Handler Course", image: "dayHeel", level: "Owners", format: "Field + home",
@@ -248,7 +248,7 @@ export const courses = [
     topics: ["Stress signals and body language", "Fear, reactivity and aggression", "Management versus training", "When to call a professional"],
   },
   {
-    slug: "obedience-for-owners", name: "Obedience for Owners", image: "dayGsd", level: "Beginner", format: "Group classes",
+    slug: "basic-obedience", name: "Basic Obedience for Pet Owners", image: "dayGsd", level: "Beginner", format: "Group classes",
     short: "Practical group classes that give everyday owners a calm, reliable, well-mannered dog.",
     topics: ["Walking nicely on lead", "Sit, down, stay and recall", "Calm greetings and visitors", "Building good habits at home"],
   },
