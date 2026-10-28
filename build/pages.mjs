@@ -32,7 +32,7 @@ const home = {
 ${glassPanel({
   image: "dayFamily", imageAlt: "A German Shepherd relaxing on the lawn while a family plays in the garden",
   title: "Trained to trial standard",
-  text: "Our dogs are trained by a team that competes and works as decoys in Protection Sports Association trials, then proofed for the real places they will live and work.",
+  text: "Our dogs are trained by a team of professionals who compete in international protection sports and hold the highest number of titled dogs in India and Asia. Every dog is then proofed for real-life scenarios and the places it will live and work.",
   buttons: btn("Our protection dogs", "/protection-dogs/") + btn("Our difference", "/our-difference/") + btn("Connect with us", "/contact/", { arrowIcon: true }),
   list: ["Working-line genetics", "Family-safe temperament", "Off-leash obedience & control", "Health screened & vaccinated", "Handler training before handover", "Lifetime support"],
 })}
@@ -226,7 +226,7 @@ ${pageHero({ eyebrow: "Our difference", title: "The Wolfmaster standard", lead: 
     </div>
   </div>
 </section>
-${split({ image: "buntyPsa", imageAlt: "Rajender with his Malinois and trophies at the Memorial PSA Trial 2025", title: "Proven on the trial field", paras: ["In December 2025 Rajender and his Malinois took home a medal and three trophies at the Memorial PSA Trial in Hyderabad. The same standard that wins on the trial field goes into every dog we place."], buttons: btn("PSA sport & decoy", "/psa/", { arrowIcon: true }) })}
+${split({ image: "buntyPsa", imageAlt: "Rajender with his Malinois and trophies at the Memorial PSA Trial 2025", title: "Proven on the trial field", paras: ["In December 2025 Rajender and his Malinois took home a medal and three trophies at the Memorial PSA Trial in Hyderabad. The same standard that wins on the trial field goes into every dog we place."], buttons: btn("Board & train programs", "/board-and-train/", { arrowIcon: true }) })}
 `,
 };
 
@@ -359,25 +359,6 @@ ${contactForm("Book a training assessment")}
 `,
 };
 
-const psa = {
-  path: "/psa/",
-  title: "PSA Sport & Decoy",
-  description: "Protection Sports Association training, trials and decoy work with Wolfmaster K9 in India.",
-  body: `
-${pageHero({ eyebrow: "PSA sport & decoy", title: "Protection sport in India", lead: "PSA is one of the most demanding protection sports in the world. Wolfmaster K9 trains dogs, handlers and decoys for it, and has hosted trials in India.", image: "psa" })}
-${split({ image: "buntyPsa", imageAlt: "Rajender with his Malinois and trophies at the Memorial PSA Trial 2025", title: "Memorial PSA Trial 2025", paras: ["Hosted by Progressive Canines PSA Club in Hyderabad on 7–8 December 2025. Rajender and his Malinois took home a medal and three trophies."], buttons: btn("Train for PSA", "/contact/", { variant: "primary", arrowIcon: true }) })}
-<section class="section section--alt">
-  <div class="wrap narrow">
-    ${sectionHead({ title: "PSA with Wolfmaster", center: false })}
-    <ul class="record">
-      <li class="reveal"><span>Dec 2025</span><div><h3 class="h3">Memorial PSA Trial, Hyderabad</h3><p class="muted">A medal and three trophies.</p></div></li>
-      <li class="reveal"><span>Dec 2024</span><div><h3 class="h3">PSA Decoy Certification Camp, New Delhi</h3><p class="muted">Instructed by Jeff Riccio, hosted by Wolfmaster K9.</p></div></li>
-      <li class="reveal"><span>Ongoing</span><div><h3 class="h3">PSA trials in India</h3><p class="muted">Hosted by Wolfmaster K9, with Rajender working as decoy.</p></div></li>
-    </ul>
-  </div>
-</section>
-`,
-};
 
 const guides = [
   {
@@ -479,6 +460,60 @@ ${pageHero({ eyebrow: "Areas we serve", title: `Protection dogs in ${a.name}`, l
 `,
 }));
 
+const boardTrain = {
+  path: "/board-and-train/",
+  title: "Board & Train Programs",
+  description: "Residential board and train programs at Wolfmaster K9: obedience, behaviour, protection and puppy programs with daily training and a full handler handover.",
+  body: `
+${pageHero({ eyebrow: "Board & train", title: "Board &amp; train programs", lead: "Your dog lives and trains with the Wolfmaster team, with structured sessions every day. When it comes home, you learn to handle it with the same results.", image: "dayEstate", buttons: btn("Book an assessment", "/contact/?course=Board%20%26%20Train%20Programs", { variant: "primary", arrowIcon: true }) + phoneBtn() })}
+<section class="section">
+  <div class="wrap">
+    ${sectionHead({ title: "Choose a program", text: "Every program starts with an assessment. We recommend the program and its length once we have met your dog." })}
+    <div class="program-grid program-grid--four">
+      ${[
+        ["Obedience board &amp; train", "Reliable obedience and off-leash control: heel, recall, place, stays and calm manners around people, traffic and other dogs.", "dayTraining"],
+        ["Behaviour board &amp; train", "For dogs with reactivity, fear or aggression. A structured behaviour plan worked daily by an experienced behaviourist.", "dayMalinois"],
+        ["Protection board &amp; train", "For suitable dogs: protection work built on obedience and a clear off switch, proofed in real environments.", "heroBite"],
+        ["Puppy board &amp; train", "Foundation training for young dogs: socialisation, confidence, engagement and early obedience.", "dayPuppy"],
+      ].map(([h, p, im]) => `<article class="program reveal"><div class="program__img"><img src="${img(im, "sm")}" alt="" loading="lazy"></div><h3 class="h3">${h}</h3><p class="muted">${p}</p></article>`).join("")}
+    </div>
+  </div>
+</section>
+<section class="section section--alt">
+  <div class="wrap split">
+    <div class="split__body reveal">
+      <h2 class="h2">What every program includes</h2>
+      <p class="muted">Your dog follows the same daily routine as the dogs we train for placement, with progress updates from the team throughout.</p>
+    </div>
+    <div class="reveal">
+      <ul class="ticks ticks--boxed">
+        <li>Assessment before the program starts</li>
+        <li>Daily structured training sessions</li>
+        <li>Exercise, feeding and care at our facility</li>
+        <li>Regular photo and video progress updates</li>
+        <li>Handler sessions so you get the same results</li>
+        <li>Follow-up support once your dog is home</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <ol class="steps steps--grid">
+      ${[
+        ["Assessment", "We meet your dog, understand the problem or goal and recommend a program."],
+        ["Arrival", "Your dog settles in with the team and its daily routine begins."],
+        ["Training", "Daily sessions, with regular updates so you can follow its progress."],
+        ["Handover", "You train with your dog and our trainers before it goes home."],
+        ["Follow-up", "Check-ins and refresher sessions to keep the results."],
+      ].map(([h, p], i) => `<li class="step reveal"><span class="step__n">${i + 1}</span><div><h3 class="h3">${h}</h3><p class="muted">${p}</p></div></li>`).join("")}
+    </ol>
+  </div>
+</section>
+${contactForm("Book a board & train assessment")}
+`,
+};
+
 // ------------------------------------------------------------------ COURSES & GALLERY
 const coursesPage = {
   path: "/courses/",
@@ -514,5 +549,5 @@ ${cta({ title: "Follow us for more", text: "New training clips and photos every 
 export const pages = [
   home, availableDogs, ...breedPages, protectionIndex, ...protectionPages,
   difference, team, processPage, story, howItWorks,
-  coursesPage, galleryPage, training, psa, guidesIndex, ...guidePages, faq, contact, ...areaPages,
+  coursesPage, galleryPage, training, boardTrain, guidesIndex, ...guidePages, faq, contact, ...areaPages,
 ];

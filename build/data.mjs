@@ -102,7 +102,7 @@ export const nav = [
     label: "Client Service",
     items: [
       { label: "Training Programs", href: "/training/" },
-      { label: "PSA Sport & Decoy", href: "/psa/" },
+      { label: "Board & Train Programs", href: "/board-and-train/" },
       { label: "Gallery", href: "/gallery/" },
       { label: "Guides", href: "/guides/" },
       { label: "FAQ", href: "/faq/" },
