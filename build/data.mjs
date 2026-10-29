@@ -130,6 +130,7 @@ export const breeds = [
     body: [
       "A well-bred German Shepherd is the classic family guardian: confident with strangers, gentle with children and alert to anything out of place. Few dogs combine that much presence with that much patience.",
       "We select working-line Shepherds for sound hips, stable nerves and real courage, then train them for control first. The result is a dog that settles into family life and steps forward only when it is asked to.",
+      "Rajender has trained German Shepherds for Kennel Club of India (KCI) obedience competitions.",
     ],
   },
   {
@@ -140,6 +141,7 @@ export const breeds = [
     body: [
       "The Dutch Shepherd is the quiet professional of the shepherd breeds. It shares the Malinois's athleticism but tends to be a little more independent and very hard to rattle.",
       "Their coat and build handle Indian summers well, which makes them a strong choice for farmhouses and larger properties. We pair them with owners who enjoy training and want a dog that thinks for itself.",
+      "Rajender's own Dutch Shepherd, Jade, holds a PSA 2 title and is working toward PSA 3. She is the only Dutch Shepherd in Asia to have achieved PSA 2.",
     ],
   },
 ];
@@ -191,12 +193,12 @@ export const protectionTypes = [
     ],
   },
   {
-    slug: "security-dogs", name: "Security Dogs", image: "psa",
-    short: "Working dogs for security agencies and teams that need a reliable, handler-led K9.",
-    points: ["Patrol and handler-led work", "Training for your handlers", "Maintenance training plans", "Ongoing performance checks"],
+    slug: "security-dogs", name: "Security & Detection Dogs", image: "psa",
+    short: "Patrol, scent-work and detection dogs for companies, government-sector organisations and security teams.",
+    points: ["Patrol dog training and development", "Scent-work and detection training", "Explosive-detection dog training", "Handler education and practical dog management", "Environmental conditioning for working roles"],
     body: [
-      "Security agencies and in-house teams need dogs that perform the same way on every shift, with every trained handler. That takes the right dog and a training plan that continues after handover.",
-      "We supply and train security dogs and their handlers, then support the team with maintenance training so standards stay high.",
+      "Rajender has worked with companies, government-sector organisations and military personnel on working-dog training and handler development, including patrol, scent-work and explosive-detection dogs.",
+      "Every working dog is trained for control, reliability, confidence and the performance its role demands. We train the handlers alongside the dogs, so the standard holds on every shift.",
     ],
   },
 ];
@@ -224,18 +226,28 @@ export const dogs = [
 export const courses = [
   {
     slug: "professional-dog-trainer", name: "Professional Dog Trainer Course", image: "dayTraining", level: "Career", format: "Classroom + field",
-    short: "A structured course for people who want to train dogs professionally, built on the methods the Wolfmaster team uses every day.",
-    topics: ["Learning theory and canine body language", "Obedience from foundation to off-leash", "Behaviour assessment and problem cases", "Working with clients and their families"],
+    short: "For people who want to train dogs professionally: training mechanics, reading behaviour, evaluating performance and making sound training decisions.",
+    topics: ["Training mechanics and timing", "Understanding and reading dog behaviour", "Evaluating performance", "Obedience, engagement and control"],
   },
   {
     slug: "decoy-camp", name: "Decoy Camp", image: "psa", level: "Advanced", format: "Field",
-    short: "Hands-on decoy fundamentals: safe catches, reading the dog and building its confidence and control.",
-    topics: ["Equipment, safety and suit work", "Presenting the sleeve and catching", "Reading drive, stress and confidence", "Working safely with handlers and trial dogs"],
+    short: "Decoy development for aspiring trial decoys: timing, movement and safety, and working responsibly with sport dogs.",
+    topics: ["Decoy timing and movement", "Safety for decoy and dog", "Reading drive, stress and confidence", "Working responsibly with sport dogs"],
+  },
+  {
+    slug: "sport-coaching", name: "Sport & Competition Coaching", image: "heroBite", level: "Competitors", format: "Field",
+    short: "Coaching for handlers preparing dogs for protection-sport trials and KCI obedience competitions.",
+    topics: ["Obedience and engagement", "Control and environmental confidence", "Technical demands of protection-sport trials", "KCI obedience exercises"],
+  },
+  {
+    slug: "show-handling", name: "Show Handling Course", image: "dayGsd", level: "Handlers", format: "Ring practice",
+    short: "Learn competitive show handling from a champion handler: presentation, ring discipline and the technical understanding the ring demands.",
+    topics: ["Professional presentation", "Ring discipline", "Gaiting and stacking", "Preparing a dog for breed shows"],
   },
   {
     slug: "protection-dog-handler", name: "Protection Dog Handler Course", image: "dayHeel", level: "Owners", format: "Field + home",
     short: "For owners of protection dogs who want complete, confident handling at home and in public.",
-    topics: ["Control, commands and the off switch", "Handling in traffic, crowds and vehicles", "Scenario awareness and safe responses", "Maintenance training at home"],
+    topics: ["Control, commands and the off switch", "Impulse control and appropriate responses", "Handling in traffic, crowds and vehicles", "Maintenance training at home"],
   },
   {
     slug: "puppy-foundation", name: "Puppy Foundation Course", image: "dayPuppy", level: "Beginner", format: "Weekly sessions",
@@ -248,7 +260,7 @@ export const courses = [
     topics: ["Stress signals and body language", "Fear, reactivity and aggression", "Management versus training", "When to call a professional"],
   },
   {
-    slug: "basic-obedience", name: "Basic Obedience for Pet Owners", image: "dayGsd", level: "Beginner", format: "Group classes",
+    slug: "basic-obedience", name: "Basic Obedience for Pet Owners", image: "dayTraining", level: "Beginner", format: "Group classes",
     short: "Practical group classes that give everyday owners a calm, reliable, well-mannered dog.",
     topics: ["Walking nicely on lead", "Sit, down, stay and recall", "Calm greetings and visitors", "Building good habits at home"],
   },

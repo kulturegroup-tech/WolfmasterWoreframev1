@@ -43,7 +43,7 @@ export function contactForm(title = "Speak with the Wolfmaster team") {
     <div class="contact-block__intro">
       <p class="eyebrow">Connect with us</p>
       <h2 class="h2">${title}</h2>
-      <p class="muted">Tell us about your home, your family and what you need from a dog. A member of the team will call you back, usually the same day.</p>
+      <p class="muted">Tell us about your home, your family and what you need from a dog. A member of the team will get back to you.</p>
       <ul class="contact-list">
         <li><span>Phone / WhatsApp</span><a href="${site.phoneHref}">${site.phone}</a></li>
         <li><span>Email</span><a href="mailto:${site.email}">${site.email}</a></li>
@@ -90,7 +90,7 @@ function footer() {
   <div class="wrap footer__grid">
     <div class="footer__brand">
       ${logo}
-      <p>Protection dogs, training and PSA sport from the Wolfmaster K9 team, led by founder and head trainer Rajender “Wolfmaster Bunty” Chauhan. In the field since 2002.</p>
+      <p>Protection dogs, working dogs, training and coaching from the Wolfmaster K9 team, led by Rajender “Wolfmaster Bunty” Chauhan: professional dog trainer, champion dog handler, PSA coach and working-dog specialist. Training dogs since 2002.</p>
       <p class="footer__contact"><a href="${site.phoneHref}">${site.phone}</a><br><a href="mailto:${site.email}">${site.email}</a><br>${site.base}</p>
     </div>
     ${cols}
@@ -228,11 +228,11 @@ export function typeCards(list = protectionTypes) {
 
 export function credentials() {
   const items = [
-    ["Since 2002", "Over two decades of training working and protection dogs."],
-    ["PSA Decoy", "Rajender works as a Protection Sports Association decoy and competitor."],
-    ["PSA trials in India", "Wolfmaster K9 has hosted multiple PSA trials in India."],
-    ["Decoy certification", "Hosted a PSA decoy certification camp in New Delhi, December 2024."],
-    ["Memorial PSA Trial 2025", "A medal and three trophies at the Hyderabad trial, December 2025."],
+    ["Since 2002", "More than two decades of professional dog training, handling and canine sport."],
+    ["Champion handler", "Champion dogs in India and multiple Best Handler awards in the show ring."],
+    ["300+ trophies", "Rajender's red-nose American Staffordshire Terrier, a Master Class obedience competitor."],
+    ["PSA since 2016", "More than nine dogs prepared for PDC and two full PSA 1 titles."],
+    ["Jade · PSA 2", "The only Dutch Shepherd in Asia with a PSA 2 title, now working toward PSA 3."],
   ];
   return `<div class="cred-track">${items.map(([t, d]) => `<div class="cred reveal"><h3 class="cred__title">${t}</h3><p>${d}</p></div>`).join("")}</div>`;
 }
